@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="1892.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox prefHeight="606.0" prefWidth="1864.0">
+         <children>
+            <HTMLEditor fx:id="HtmlEditor" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="166.0" prefWidth="760.0" />
+            <HBox prefHeight="36.0" prefWidth="822.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#HtmlAction" text="Produce HTML code" />
+                  <Button mnemonicParsing="false" onAction="#LoadHtml" text="LoadHTMLfile" />
+                  <Button mnemonicParsing="false" onAction="#loadHTMLUrl" text="LoadHTMLurl" />
+                  <Button mnemonicParsing="false" onAction="#SaveHtml" text="SaveHTML">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
+                  <Label fx:id="stateLabel" text="Label" visible="false" />
+                  <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" />
+                  <Label text="URL:" />
+                  <TextField fx:id="UrlText" />
+               </children>
+            </HBox>
+            <WebView fx:id="webView" prefHeight="391.0" prefWidth="1864.0" />
+         </children>
+      </VBox>
+   </children>
+</Pane>
